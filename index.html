@@ -194,7 +194,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Startseite
+            Home
           </a>
         </li>
       
@@ -204,7 +204,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archiv
+            Archives
           </a>
         </li>
       
@@ -270,7 +270,7 @@
               
                 
                 <a class="post-title-link" href="/2017/07/19/dabenzai/" itemprop="url">
-                  dabenzai
+                  售货机的逻辑
                 </a>
               
             
@@ -324,7 +324,62 @@
       
         
           
-            <h3 id="我是个大笨崽"><a href="#我是个大笨崽" class="headerlink" title="我是个大笨崽"></a>我是个大笨崽</h3>
+            <h3 id="写此篇的目的"><a href="#写此篇的目的" class="headerlink" title="写此篇的目的"></a>写此篇的目的</h3><p>我们要卖中吉的综合机，软件需要我们自己写。所以我们要根据中吉给的底层协议，来实现售货机的功能。<br>而我在其中的角色，是软件功能设计者，软件进度跟进者。</p>
+<h3 id="售货机需要哪些功能？"><a href="#售货机需要哪些功能？" class="headerlink" title="售货机需要哪些功能？"></a>售货机需要哪些功能？</h3><h4 id="共性功能："><a href="#共性功能：" class="headerlink" title="共性功能："></a>共性功能：</h4><ol>
+<li>初始化：导入初始相关数据，使其可售卖。<ul>
+<li>条件：[售货机端请求]时</li>
+<li>内容：每个货道对应的商品信息：图片、中英文名称、价格、库存。</li>
+</ul>
+</li>
+<li>同步更新：后台更新的数据，同步到售货机端。<ul>
+<li>条件：[机器重启]时</li>
+<li>内容：商品图片、中英文名称、价格、库存。</li>
+</ul>
+</li>
+<li>售卖：展示支付二维码前查询可售状态、收到支付成功的推送后出货、收到出货结果后上报且更新可售状态。<ul>
+<li>展示支付二维码前查询可售状态<ul>
+<li>条件：用户输入货道号时</li>
+<li>查询内容<ul>
+<li>货道是否故障</li>
+<li>商品是否售空</li>
+<li>是否连续2次出货失败历史</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>收到支付成功的推送后 出货<ul>
+<li>展示状态：出货中、出货成功、出货失败。</li>
+</ul>
+</li>
+<li>收到出货结果后 <ul>
+<li>出货成功：更改该货道库存，上报出货成功状态，清楚上次出货失败记录。</li>
+<li>出货失败：上报出货失败状态，存储此次出货失败记录。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>故障查询：定时、特定触发条件查询机器故障。<ul>
+<li>查询内容：暂无货道故障以外的故障，需要电话问。</li>
+</ul>
+</li>
+<li>故障上报：定时、或特定触发条件上报机器故障。</li>
+<li>心跳：监控网络状态。</li>
+</ol>
+<h4 id="个性功能"><a href="#个性功能" class="headerlink" title="个性功能"></a>个性功能</h4><ol>
+<li>性能测试<ul>
+<li>调货检测灵敏度</li>
+</ul>
+</li>
+<li>设置<ul>
+<li>制冷加热系统：制冷 加热 关闭</li>
+<li>设置温度上下限</li>
+<li>玻璃除雾：开关</li>
+</ul>
+</li>
+</ol>
+<hr>
+<p>后台的设置：<br>每个货道 的每个商品 最大容量限制 （冰山综合机怎么处理的？<br>支持货道合并（实际运营的用户有没有需求，冰山怎么处理的？</p>
+
           
         
       
@@ -404,13 +459,22 @@
             <div class="site-state-item site-state-posts">
               <a href="/archives">
                 <span class="site-state-item-count">1</span>
-                <span class="site-state-item-name">Artikel</span>
+                <span class="site-state-item-name">posts</span>
               </a>
             </div>
           
 
           
 
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">tags</span>
+              
+            </div>
           
 
         </nav>
