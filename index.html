@@ -194,7 +194,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Startseite
+            Home
           </a>
         </li>
       
@@ -204,7 +204,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archiv
+            Archives
           </a>
         </li>
       
@@ -332,15 +332,16 @@
 <h5 id="售货机端："><a href="#售货机端：" class="headerlink" title="售货机端："></a>售货机端：</h5><ol>
 <li>同步商品信息：商品编号、名称、图片、价格、数量。永久化信息到本地。</li>
 <li>售卖：选货道进入商品详情<ul>
-<li>出货前：判断货道是否可售（可售定义如下)，如果可售，则查询所选货道的商品信息。<ul>
+<li>进入详情前：判断货道是否可售（可售定义如下)，如果可售，则查询所选货道的商品信息。<ul>
 <li>货道无故障 <em>能否出货前查询所选货道是否故障</em> </li>
 <li>货道有库存</li>
 <li>货道无连续2次出货失败记录</li>
 </ul>
 </li>
+<li>收到订单已支付消息后，提示支付成功。</li>
 <li>出货中：检测出货是否成功，展示状态（出货中，出货成功/出货失败，请联系客服）。</li>
 <li>出货后：<ul>
-<li>出货成功：更改该货道库存，上报出货成功状态，清除上次出货失败记录。</li>
+<li>出货成功：更改该货道库存，缓存订单编号 <em>为什么</em> 上报出货成功状态，清除上次出货失败记录。</li>
 <li>出货失败：上报出货失败，存储出货故障。</li>
 </ul>
 </li>
@@ -889,7 +890,7 @@
             <div class="site-state-item site-state-posts">
               <a href="/archives">
                 <span class="site-state-item-count">4</span>
-                <span class="site-state-item-name">Artikel</span>
+                <span class="site-state-item-name">posts</span>
               </a>
             </div>
           
@@ -902,7 +903,7 @@
             <div class="site-state-item site-state-tags">
               
                 <span class="site-state-item-count">2</span>
-                <span class="site-state-item-name">Tags</span>
+                <span class="site-state-item-name">tags</span>
               
             </div>
           
