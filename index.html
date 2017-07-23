@@ -194,7 +194,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Home
+            Startseite
           </a>
         </li>
       
@@ -204,7 +204,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archives
+            Archiv
           </a>
         </li>
       
@@ -237,6 +237,168 @@
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/23/somethingiwanttoknow/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="fakersheep">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="fakersheep の blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/07/23/somethingiwanttoknow/" itemprop="url">
+                  周一工作准备
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">fakersheep</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-07-23T12:23:15+08:00">
+                2017-07-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>本篇目的：工作准备，中吉综合机的逻辑、前端、后台、手机端，咖啡机的逻辑、维护端。</p>
+<hr>
+<p>###中吉综合机的功能点</p>
+<p>#####PC后台：</p>
+<ol>
+<li>给机器的每个货道配货、换货、合并货道。<em>货道很难拆下来，怎么合并</em></li>
+</ol>
+<p>#####售货机端：</p>
+<ol>
+<li>同步商品信息：商品编号、名称、图片、价格、数量。永久化信息到本地。</li>
+<li>售卖：选货道进入商品详情<ul>
+<li>出货前：判断货道是否可售（可售定义如下)，如果可售，则查询所选货道的商品信息。<ul>
+<li>货道无故障 <em>能否出货前查询所选货道是否故障</em> </li>
+<li>货道有库存</li>
+<li>货道无连续2次出货失败记录</li>
+</ul>
+</li>
+<li>出货中：检测出货是否成功，展示状态（出货中，出货成功/出货失败，请联系客服）。</li>
+<li>出货后：<ul>
+<li>出货成功：更改该货道库存，上报出货成功状态，清除上次出货失败记录。</li>
+<li>出货失败：上报出货失败状态，存储此次出货失败记录。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>故障查询与上报 <em>是否有自动查询故障的机制</em></li>
+<li>维护模式 <ul>
+<li>纸币可以退回、硬币可以找零、不买货可以找零。不用显示在屏幕上。</li>
+<li>遥控出货开关</li>
+<li>LED灯开关</li>
+<li>温度开关：<em>1区2区是什么，设置温度有什么用，温度上限和下限有什么用</em></li>
+<li>制冷加热：（只要开制冷，自动开启玻璃除雾）</li>
+<li>钱币预装： <em>点了有什么用</em></li>
+<li>清除故障：<em>有什么用</em></li>
+<li>测试货道出货</li>
+</ul>
+</li>
+<li>广告、取货码</li>
+</ol>
+<p>售卖模式原型地址：<a href="https://modao.cc/app/vex81uF5N9SS4sHR0cSBuE6FMQS1p4V" target="_blank" rel="external">https://modao.cc/app/vex81uF5N9SS4sHR0cSBuE6FMQS1p4V</a></p>
+<hr>
+<p>咖啡机的问题和逻辑</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
     
       
 
@@ -284,7 +446,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">fakersheep</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-07-23T12:12:25+08:00">
                 2017-07-23
@@ -416,7 +578,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">fakersheep</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-07-21T21:55:18+08:00">
                 2017-07-21
@@ -554,7 +716,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">fakersheep</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-07-19T23:22:48+08:00">
                 2017-07-19
@@ -729,8 +891,8 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">3</span>
-                <span class="site-state-item-name">posts</span>
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">Artikel</span>
               </a>
             </div>
           
@@ -743,7 +905,7 @@
             <div class="site-state-item site-state-tags">
               
                 <span class="site-state-item-count">2</span>
-                <span class="site-state-item-name">tags</span>
+                <span class="site-state-item-name">Tags</span>
               
             </div>
           
